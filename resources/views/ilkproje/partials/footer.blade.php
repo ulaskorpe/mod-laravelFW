@@ -1,6 +1,8 @@
-<div class="ui padded grid">
-    <div class="one wide teal column"></div>
-    <div class="fourteen wide grey column">FOOTER</div>
-    <div class="one wide teal column"></div>
+<nav class="navbar navbar-expand-lg bg-secondary">
+
+<div class="row">
+    <div class="col-md-12">Footer</div>
 
 </div>
+
+</nav>

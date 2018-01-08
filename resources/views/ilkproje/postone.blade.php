@@ -9,7 +9,7 @@
 
     <div class="anasayfa">
         <div class="container">
-        <div class="panel-heading">ROGUE ONE</div>
+        <div class="panel-heading"> </div>
             <div class="panel-body">
             <form class="form-horizontal" role="form" id="post_one" action="{{Route('postOne')}}"
                   method="post" enctype="multipart/form-data">
@@ -38,13 +38,18 @@
 
             </form>
             </div>
-
         </div>
     </div>
 
 @endsection
 
 @section('scripts')
+
+
+    <script>
+
+
+    </script>
 
 @endsection
 
