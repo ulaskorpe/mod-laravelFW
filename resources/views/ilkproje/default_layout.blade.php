@@ -23,8 +23,8 @@
         Launch demo modal
     </button>*/
 ?>
-<div class="modal" tabindex="-1" role="dialog" id="myModal">
-    <div class="modal-dialog" role="document">
+<div class="modal col-xl" tabindex="-1" role="dialog" id="myModal"  >
+    <div class="modal-dialog" role="document" >
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modal-title">Modal title</h5>
@@ -32,7 +32,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" id="modal-body">
+            <div class="modal-body" id="modal-body" >
 
             </div>
             <div class="modal-footer">

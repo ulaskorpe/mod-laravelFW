@@ -7,7 +7,7 @@
 
             <div class="row row_1">
 
-                <div class="col-md-4">   <label for="">Name Surname : </label></div>
+                <div class="col-md-4">   <label for="">{{__('personnel.name_surname')}}: </label></div>
                 <div class="col-md-8">
                 <input type="text" name="name_surname" id="name_surname" class="form-control" required></div>
 
@@ -47,6 +47,38 @@
                     <input type="text" name="phone" id="phone" class="form-control" required></div>
 
             </div>
+
+
+            <div class="row row_1">
+
+                <div class="col-md-4">   <label for="">City : </label></div>
+                <div class="col-md-8">
+                    <select name="city_id" id="city_id" class="form-control">
+
+                        <option value=""> select city </option>
+                        @foreach($cities as $city)
+                            <option value="{{$city['id']}}" >{{$city['name']}}</option>
+                        @endforeach
+
+                    </select>
+
+
+                </div>
+
+            </div>
+
+            <div class="row row_1">
+
+                <div class="col-md-4">   <label for="">Photo : </label></div>
+                <div class="col-md-8">
+
+                    <input name="photo_file" id="photo_file" type="file" class="form-control"
+                           value=""/>
+
+                </div>
+
+            </div>
+
 
             <div class="row row_1">
 

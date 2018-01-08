@@ -19,9 +19,21 @@ class PersonnelTableSeeder extends Seeder
             $personnel->name =$faker->name($gender);
             $personnel->address =$faker->address;
             $personnel->email =$faker->email;
-            $personnel->phone =$faker->phoneNumber;
+        //    $personnel->phone =$faker->phoneNumber;
             $personnel->gender =$gender;
+            $personnel->city_id =rand(1,81);
             $personnel->save();
+
+
+            $count= rand(1,5);
+
+            for($j=0;$j<$count;$j++){
+
+            $phone_number = new \App\Models\PhoneNumber();
+            $phone_number->personnel_id= $personnel->id;
+            $phone_number->phone_number = $faker->phoneNumber;
+            $phone_number->save();
+            }
 
         }
     }

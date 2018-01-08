@@ -44,9 +44,60 @@
 
                 <div class="col-md-4">   <label for="">Phone : </label></div>
                 <div class="col-md-8">
-                    <input type="text" name="phone" id="phone" value="{{$personnel['phone']}}" class="form-control" required></div>
+
+                @foreach($personnel->phone_numbers as $phone_number)
+                        {{$phone_number->phone_number}}<br>
+                    @endforeach
+
+
+                </div>
 
             </div>
+
+
+
+
+            <div class="row row_1">
+
+                <div class="col-md-4">   <label for="">City : </label></div>
+                <div class="col-md-8">
+                    <select name="city_id" id="city_id" class="form-control">
+
+                        <option value=""> select city </option>
+                        @foreach($cities as $city)
+                            <option value="{{$city['id']}}" @if($city['id']==$personnel['city_id']) selected @endif>{{$city['name']}}</option>
+                        @endforeach
+
+                    </select>
+
+
+                </div>
+
+            </div>
+
+            <div class="row row_1">
+
+                <div class="col-md-4">   <label for="">Photo : </label></div>
+                <div class="col-md-8">
+
+                    <input name="photo_file" id="photo_file" type="file" class="form-control"
+                           value=""/>
+
+                </div>
+
+            </div>
+
+
+            @if(!empty($personnel['photo_file']))
+                <div class="row row_1">
+                    <div class="col-md-4">  </div>
+                    <div class="col-md-8">
+                        <img src="{{makePrivateFileUrl($personnel['photo_file'],150,150,1)}}" alt="">
+                    </div>
+                </div>
+
+                @endif
+
 
             <div class="row row_1">
 

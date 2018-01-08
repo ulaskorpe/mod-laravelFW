@@ -2,10 +2,10 @@
 <nav class="navbar navbar-expand-lg bg-warning">
 
 
-
+    <ul class="nav">
     @if(Auth::id())
 
-    <ul class="nav">
+
 
         <li class="nav-item">
             <a class="nav-link active" href="{{Route('home')}}">Home</a>
@@ -29,10 +29,9 @@
                 {{ csrf_field() }}
             </form>
         </li>
-    </ul>
+
         @else
 
-        <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="{{ route('login') }}">Login</a>
             </li>
@@ -40,9 +39,18 @@
                 <a class="nav-link active" href="{{ route('register') }}">Register</a>
             </li>
 
-        </ul>
     @endif
 
+
+        <li class="nav-item">
+            @if(Session::get('lang')=='tr')
+            <a class="nav-link active" href="{{ route('set_language','en') }}">English</a>
+            @else
+            <a class="nav-link active" href="{{ route('set_language','tr') }}">Türkçe</a>
+                @endif
+        </li>
+
+    </ul>
 
 </nav>
 

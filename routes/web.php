@@ -18,7 +18,14 @@ Route::get('/home', function (){
     return redirect('/');
 });
 
+Route::get('/pfiles', "Common\File\FileController@getFile")->middleware('auth')->name('pfiles');
 
+Route::get('/get_file', "Common\File\FileController@getCommonFile")->name('get_file');
+
+Route::get('/set_language/{lang?}','AppController@setLanguage')->name('set_language');
+
+
+Route::get('/change_lang/{lang?}','AppController@setLanguage')->name('change_lang');
 
 Route::get('/peopleArray', 'PersonnelController@index')->name('peopleArray')->middleware('auth');
 

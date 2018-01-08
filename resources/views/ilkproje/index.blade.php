@@ -12,7 +12,7 @@
                 <div class="col-md-9">
 
 
-                    <h4 class="card-title">People List</h4>
+                    <h4 class="card-title">{{__('personnel.personnel_list')}}</h4>
 
                 </div>
 
@@ -34,9 +34,9 @@
 
         <thead>
         <tr>
-            <th> NAME</th>
+            <th>{{__('personnel.name_surname')}}</th>
             <th>ADDRESS</th>
-            <th>EMAIL</th>
+            <th>{{__('personnel.email')}}</th>
             <th>PHONE</th>
             <th>ACTION</th>
 
